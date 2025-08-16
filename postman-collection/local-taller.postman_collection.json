@@ -1,0 +1,413 @@
+{
+	"info": {
+		"_postman_id": "be04cb06-e406-4e2e-8823-233db36fdc6c",
+		"name": "local-taller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42478962"
+	},
+	"item": [
+		{
+			"name": "taller final",
+			"item": [
+				{
+					"name": "bancos",
+					"item": [
+						{
+							"name": "obtener todos los bancos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-base}}:8080/api/banks",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"banks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJjYXJsb3NwYWJvbiIsImlhdCI6MTc1NTMwMDMwMSwiZXhwIjoxNzU1Mzg2NzAxfQ.ZsEk5FzW1c1sP9RFadX0xqpD9ZHfHjlegrFw7Fj2kcUc9tEVOlDGgTfImywF4gMh",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"DAVIVIENDA\",\r\n    \"address\": \"DIRECCION 40\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-base}}:8080/api/banks",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"banks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"BANCOLOMBIA2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-base}}:8080/api/banks/1",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"banks",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-base}}:8080/api/banks",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"banks"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "cuentas",
+					"item": [
+						{
+							"name": "obtener todas las cuentas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-base}}:8080/api/accounts",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"1234\",\r\n    \"bankId\": 1,\r\n    \"accountHolderName\": \"Carlos Pabon\",\r\n    \"balance\": \"2000000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-base}}:8080/api/accounts",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"12345\",\r\n    \"accountHolderName\": \"Carlos Pabon2\",\r\n    \"balance\": \"2000000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-base}}:8080/api/accounts/1",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-base}}:8080/api/accounts/1",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get History",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-base}}:8080/api/accounts/history/3",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"history",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "transactions",
+					"item": [
+						{
+							"name": "Get all transaction",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-base}}:8080/api/transactions",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get History",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-base}}:8080/api/transactions/1",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"transactions",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create transaction",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sourceAccountId\": 1,\r\n    \"destinationAccountId\": 2,\r\n    \"amount\": \"1000000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-base}}:8080/api/transactions",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "autorizacion",
+					"item": [
+						{
+							"name": "generar token",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"username\":\"carlospabon\",\r\n\"password\":\"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-base}}:8080/api/auth",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registrar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"username\":\"carlospabon\",\r\n\"password\":\"12345\",\r\n\"role\":\"ADMIN\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-base}}:8080/api/auth/register",
+									"host": [
+										"{{url-base}}"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJjYXJsb3NwYWJvbiIsImlhdCI6MTc1NTMwMDMwMSwiZXhwIjoxNzU1Mzg2NzAxfQ.ZsEk5FzW1c1sP9RFadX0xqpD9ZHfHjlegrFw7Fj2kcUc9tEVOlDGgTfImywF4gMh",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}

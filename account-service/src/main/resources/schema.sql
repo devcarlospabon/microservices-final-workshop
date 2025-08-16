@@ -1,0 +1,9 @@
+CREATE TABLE accounts (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    account_number VARCHAR(20) NOT NULL UNIQUE,
+    bank_id INT NOT NULL,
+    account_holder_name VARCHAR(255) NOT NULL,
+    balance NUMERIC(15, 2) DEFAULT 0.00,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
